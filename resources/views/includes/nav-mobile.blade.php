@@ -16,8 +16,8 @@
     <div></div>
     <div></div>
     <div></div>
-    <a href="{{ route('chatbot') }}" class="">
-        <i class="fas fa-bell"></i>
+    <a href="" class="">
+        <i class="fas fa-robot"></i>
         Chatbot
     </a>
     @auth

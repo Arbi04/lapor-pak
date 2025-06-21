@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\ReportController;
-use App\Http\Controllers\User\ChatbotController;
 use App\Http\Controllers\User\ProfileController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Admin\ResidentController;
@@ -23,10 +22,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/create-report', [UserReportController::class, 'create'])->name('report.create');
     Route::post('/create-report', [UserReportController::class, 'store'])->name('report.store');
     Route::get('/report-success', [UserReportController::class, 'success'])->name('report.success');
-
-    // Chatbot route
-    Route::get('/chatbot', [ChatbotController::class, 'index'])->name('chatbot');
-    Route::post('/chatbot/command', [ChatbotController::class, 'processCommand'])->name('chatbot.command');
 
     Route::get('/my-report', [UserReportController::class, 'myReport'])->name('report.myreport');
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
