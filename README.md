@@ -1,4 +1,6 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center">
+    <h1 align="center">Lapor Pak</h1>
+</p>
 
 <p align="center">
 <a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
@@ -7,60 +9,178 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Tentang Lapor Pak
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Lapor Pak adalah sistem pelaporan masyarakat berbasis web yang memungkinkan warga untuk melaporkan berbagai masalah di lingkungan mereka dengan mudah dan cepat. Aplikasi ini dibangun menggunakan Laravel framework dengan fitur-fitur modern seperti:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   **Interface yang User-Friendly** - Antarmuka yang mudah digunakan untuk semua kalangan
+-   **Sistem Pelaporan Real-time** - Pelaporan dengan foto dan lokasi GPS
+-   **Dashboard Admin** - Panel admin untuk mengelola laporan dan status
+-   **Tracking Progress** - Sistem pelacakan status laporan untuk masyarakat
+-   **Kategorisasi Otomatis** - AI/ML untuk mengkategorikan laporan secara otomatis
+-   **Responsive Design** - Kompatibel dengan desktop dan mobile
+-   **Authentication & Authorization** - Sistem login yang aman dengan role-based access
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Fitur Utama
 
-## Learning Laravel
+### Untuk Masyarakat
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-   📱 **Buat Laporan** - Laporkan masalah dengan foto dan lokasi
+-   📍 **GPS Integration** - Lokasi otomatis terdeteksi
+-   📊 **Track Progress** - Pantau status laporan Anda
+-   🤖 **Smart Categorization** - Kategori laporan otomatis dengan AI
+-   📷 **Camera Integration** - Ambil foto langsung dari aplikasi
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Untuk Admin
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+-   🎛️ **Dashboard Management** - Kelola semua laporan dari satu tempat
+-   👥 **User Management** - Kelola data masyarakat
+-   📋 **Report Categories** - Kelola kategori laporan
+-   📈 **Status Updates** - Update progress laporan dengan bukti
+-   🗺️ **Map View** - Lihat lokasi laporan di peta
 
-## Laravel Sponsors
+## Teknologi yang Digunakan
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+-   **Backend**: Laravel 10.x
+-   **Frontend**: Blade Templates, Bootstrap, JavaScript
+-   **Database**: MySQL
+-   **Storage**: Laravel File Storage
+-   **Authentication**: Laravel Sanctum
+-   **Maps**: OpenStreetMap/Leaflet
+-   **AI/ML**: Integration dengan Gemini API dan model lokal
+-   **Icons**: FontAwesome
+-   **Notifications**: SweetAlert
 
-### Premium Partners
+## Requirements
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+-   PHP >= 8.1
+-   Composer
+-   Node.js & NPM
+-   MySQL
+-   XAMPP/LAMP/WAMP (untuk development)
+
+## Instalasi
+
+1. **Clone repository**
+
+```bash
+git clone https://github.com/username/lapor-pak.git
+cd lapor-pak
+```
+
+2. **Install dependencies**
+
+```bash
+composer install
+npm install
+```
+
+3. **Setup environment**
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+4. **Konfigurasi database**
+   Edit file `.env` dan sesuaikan konfigurasi database:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=lapor_pak
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+5. **Setup storage link**
+
+```bash
+php artisan storage:link
+```
+
+6. **Run migrations dan seeders**
+
+```bash
+php artisan migrate
+php artisan db:seed
+```
+
+7. **Build assets**
+
+```bash
+npm run dev
+# atau untuk production
+npm run build
+```
+
+8. **Start development server**
+
+```bash
+php artisan serve
+```
+
+## Default Admin Account
+
+Setelah menjalankan seeder, Anda dapat login sebagai admin dengan:
+
+-   **Email**: admin@laporpak.com
+-   **Password**: password
+
+## Struktur Project
+
+```
+app/
+├── Http/Controllers/
+│   ├── Admin/          # Controller untuk admin
+│   └── Auth/           # Controller authentication
+├── Models/             # Eloquent models
+├── Interfaces/         # Repository interfaces
+└── Repositories/       # Repository implementations
+
+resources/
+├── views/
+│   ├── pages/
+│   │   ├── admin/      # View admin
+│   │   ├── app/        # View user
+│   │   └── auth/       # View authentication
+│   └── layouts/        # Layout templates
+
+public/
+└── assets/
+    └── app/           # CSS, JS, dan assets aplikasi
+```
+
+## API Integration
+
+Aplikasi ini terintegrasi dengan:
+
+-   **Gemini AI** untuk kategorisasi laporan otomatis
+-   **Machine Learning Model** lokal sebagai fallback
+-   **OpenStreetMap** untuk peta dan geocoding
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Jika Anda ingin berkontribusi pada project ini:
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. Fork repository
+2. Buat branch fitur (`git checkout -b feature/AmazingFeature`)
+3. Commit perubahan (`git commit -m 'Add some AmazingFeature'`)
+4. Push ke branch (`git push origin feature/AmazingFeature`)
+5. Buat Pull Request
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Project ini menggunakan lisensi [MIT License](https://opensource.org/licenses/MIT).
+
+## Contact
+
+Untuk pertanyaan atau dukungan, silakan hubungi:
+
+-   Email: admin@laporpak.com
+-   Website: [Lapor Pak](https://laporpak.com)
+
+---
+
+**Dibuat dengan ❤️ menggunakan Laravel Framework**
