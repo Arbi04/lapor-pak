@@ -80,7 +80,7 @@
                         id="no-reports">
                         <div id="lottie"></div>
                         <h5 class="mt-3">Belum ada laporan</h5>
-                        <a href="" class="btn btn-primary py-2 px-4 mt-3">
+                        <a href="{{ route('report.take') }}" class="btn btn-primary py-2 px-4 mt-3">
                             Buat Laporan
                         </a>
                     </div>
@@ -136,7 +136,7 @@
                         id="no-reports">
                         <div id="lottie"></div>
                         <h5 class="mt-3">Belum ada laporan</h5>
-                        <a href="" class="btn btn-primary py-2 px-4 mt-3">
+                        <a href="{{ route('report.take') }}" class="btn btn-primary py-2 px-4 mt-3">
                             Buat Laporan
                         </a>
                     </div>
@@ -192,7 +192,7 @@
                         id="no-reports">
                         <div id="lottie"></div>
                         <h5 class="mt-3">Belum ada laporan</h5>
-                        <a href="" class="btn btn-primary py-2 px-4 mt-3">
+                        <a href="{{ route('report.take') }}" class="btn btn-primary py-2 px-4 mt-3">
                             Buat Laporan
                         </a>
                     </div>
@@ -248,7 +248,7 @@
                         id="no-reports">
                         <div id="lottie"></div>
                         <h5 class="mt-3">Belum ada laporan</h5>
-                        <a href="" class="btn btn-primary py-2 px-4 mt-3">
+                        <a href="{{ route('report.take') }}" class="btn btn-primary py-2 px-4 mt-3">
                             Buat Laporan
                         </a>
                     </div>

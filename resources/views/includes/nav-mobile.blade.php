@@ -17,8 +17,8 @@
     <div></div>
     <div></div>
     <a href="" class="">
-        <i class="fas fa-robot"></i>
-        Chatbot
+        <i class="fas fa-bell"></i>
+        Notifikasi
     </a>
     @auth
         <a href="{{ route('profile') }}" class="">
